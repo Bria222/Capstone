@@ -13,6 +13,7 @@ In this project, I set up my portfolio repository. My goal here was to build a c
 - css
 - javascript
 - bootstrap
+- scss
 
 To get a local copy up and running follow these simple steps:
 
