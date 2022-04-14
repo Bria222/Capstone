@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+        <link rel="stylesheet" href="./assets/css/mdb.min.css">
+        <link rel="stylesheet" href="./assets/css/bootstrap.css">
+        <link rel="stylesheet" href="./assets/css/wickedcss.min.css">
+        <link rel="stylesheet" href="./assets/css/main.css">
+        <link rel="stylesheet" href="./assets/css/animations.css">
+        <link rel="stylesheet" href="./assets/css/reset.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin=""> 
+        <!-- material ui cdn icons -->
+        <link href="https://fonts.googleapis.com/css2?family=Material+Icons" rel="stylesheet">
+        <!-- link to fontawesome library -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+            <!-- link to lato font family -->
+        <link
+        href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,300&amp;display=swap"
+        rel="stylesheet">
+        <title>Events254 Arena</title>
+    </head>
+<body>
+  <header id="header">
+    <!-- topmost small navigation bar start -->
+    <nav class="small-nav bg-dark color-white-text">
+      <div class="fbt">
+        <a href="https://facebook.com">
+          <i class="fab fa-facebook-f" aria-hidden="true"></i>
+        </a>
+        <a href="http://twitter.com">
+          <i class="fab fa-twitter" aria-hidden="true"></i>
+        </a>
+      </div>
+      <ul class="small-bar-actions">
+        <li><button type="button" class="color-white-text">Logout</button></li>
+        <li><button type="button" class="color-white-text">Mypage</button></li>
+        <li><button type="button" class="color-white-text">English</button></li>
+      </ul>
+    </nav>
+<!-- topmost small navigation bar end -->
+<!-- toggle button on mobile screens and smaller devicess -->
+    <button type="button" class="toggle-btn color-dark-text">
+      <img class="bars-fw1 bars-fw1-fs" src="./assets/images/iconmonstr-menu-1.svg" alt="harmburger" aria-hidden="true">
+    </button>
+<!-- main navigation bar -->
+    <nav class="lg-navbar bg-white">
+      <a class="namm-logoo-a" href="./"><img class="namm-logoo" src="./assets/images/logo.png"
+          alt="Events254 Arena"></a>
+
+      <ul class="lg-nav-link">
+        <li><a class="nav-links" href="./about.html">About</a></li>
+        <li><a class="nav-links" href="#program">Program</a></li>
+        <li><a class="nav-links" href="#join">Join</a></li>
+        <li><a class="nav-links" href="#partners">Sponsor</a></li>
+        <li><a class="nav-links" href="#speakers">Guest</a></li>
+        <li><a class="nav-links join-namm-btn" href="ticket_purchae.html">Events254 Arena</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  
+   <!-- start main section here -->
+    <section class="main">
+        <div class="container-fluid order" id="make-order">
+            <div class="order-overlay">
+              <div class="controls-top text-center" id="Order-now"> 
+                <h2>Purchae your ticket here</h2>
+              </div>
+              <h2>purchase your ticket and reserve a seat for you and your loved ones</h2>
+              <div class="row">
+                  <div class="col-sm-5">
+                    <form>
+                        <label>How many are you?</label>
+                        <select class="browser-default custom-select custom-select-md mb-3 name">
+                         
+                          <option value="one person">one person </option>
+                          <option value="two persons">two persons</option>
+                          <option value="three persons">three persons</option>
+                          <option value="four persons">four persons</option>
+                          <option value="family">family</option>
+                          <option value="five persons">five persons</option>
+                        </select>
+                      <label>Select ticket type</label>
+                      <select class="browser-default custom-select custom-select-md mb-3" id="T__size">
+                        <option selected value="0">Select ticket here</option>
+                        <option value="VVIP">VVIP -- sh. 1200</option>
+                        <option value="VIP">VIP  -- sh. 850</option>
+                        <option value="REGULAR">Regular -- sh. 600</option>
+                      </select>
+                      <label > favorite snack!</label>
+                        <select class="browser-default custom-select custom-select-md mb-3" id="snacks">
+                            <option selected value="0">Select your preferred snacks!</option>
+                          <option value="soda"> soda-- sh. 200</option>
+                          <option value="biscuits">biscuits -- sh. 150</option>
+                          <option value="crips-free">crips-- sh. 180</option>
+                        </select>
+                      <label>Select Your Toppings at sh. 50 each</label><br>
+                        <div class="custom-control custom-checkbox custom-control-inline">
+                          <input type="checkbox" class="custom-control-input" id="Sausage" value="Sausage" name="toppings">
+                          <label class="custom-control-label" for="Sausage">Sausage</label>
+                        </div>
+                        <div class="custom-control custom-checkbox custom-control-inline">
+                          <input type="checkbox" class="custom-control-input" id="Bacon" value="Bacon" name="toppings">
+                          <label class="custom-control-label" for="Bacon">Bacon</label>
+                        </div>
+                        <div class="custom-control custom-checkbox custom-control-inline">
+                          <input type="checkbox" class="custom-control-input" id="Mushrooms" value="Mushrooms" name="toppings">
+                          <label class="custom-control-label" for="Mushrooms">Mushrooms</label>
+                        </div>
+                        <br><br>
+                      <button type="submit" class="btn btn-orange proceed">Proceed</button>
+                      
+                    </form>
+                  </div>
+                  <div class="col-sm-7">
+                    <div id="information">
+                      <p>Your ticket will be processed and you will receive notification within one hour .</p>
+                      <p>Make sure you pay total amout for the ticket else it will be canceled.</p>
+                      <p>Incase of any comment of complaint, Please reach out to us as fast as possible.</p>
+                      <p id="regards">Regards, Management</p>
+                    </div>
+                    <div class="choise">
+                      <h2>Your ticket details:</h2>
+                      <div id="your-orders">
+                        <table class="table table-sm  ticket-details">
+                          <thead>
+                            <tr>
+                              <th scope="col">TYPE</th>
+                              <th scope="col">ticket type</th>
+                              <th scope="col">snack</th>
+                              <th scope="col">Topping</th>
+                              <th scope="col">Total</th>
+                            </tr>
+                          </thead>
+                          <tbody id="ordersmade">
+                            <tr>
+                              <td id="person"></td>
+                              <td id="ticket-type"></td>
+                              <td id="favourite-snack"></td>
+                              <td id="topping"></td>
+                              <td id="totals"></td>
+                            </tr>                  
+                          </tbody>
+                        </table>
+                        <p id="pizzatotal"></p>
+                        <p id="totalbill"></p> 
+                        <p id="addedprice">standard charges apply</p>
+                        <p id="finallmessage"></p>
+                      </div>
+                      <button type="button" class="btn btn-orange repeatTransaction">repeat transaction</button>
+                      <button type="button" class="btn btn-orange" id="checkout">Checkout</button>
+                      <button type="button" class="btn btn-orange deliver">click here to proceed?</button>
+                    </div>
+                    <div class="delivery">
+                        <form>
+                          <div class="form-group">
+                            <input type="text" id="name" class="form-control mb-3" placeholder="Name">
+                            <input type="number" id="phone" class="form-control mb-3" placeholder="Pnone Number">
+                            <input type="text" id="ticket" class="form-control mb-3" placeholder="how do you want to receive ticket email or text">
+                            <button type="button" class="btn btn-orange" id="final-order">Order Ticket</button>
+                          </div>
+                        </form>
+                    </div>
+                  </div>
+              </div>
+            </div>
+          </div>
+</section>
+<!-- footer starts here -->
+ <section class="footer-section">
+  <footer class="footer-sect flex-only bg-white">
+    <div class="footer-container flex-only">
+
+      <a class="footer-logo-container" href="#"><img class="footer-logo" src="./assets/images/logo.png"
+          alt="arena254"></a>
+          <small class="footer-logo-desc color-dark-text">&copy; Events254. All Rights
+            Reserved</small>
+            <small class="footer-logo-desc color-dark-text">&copy; Developed by Brian Nyachae || 2022
+              license</small>
+    </div>
+  </footer>
+ </section>
+
+ <script src="./assets/js/mdb.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  <script src="./assets/js/script.js"></script> 
+  <script src="./assets/js/main.js"></script>  
+</body>
+</html>
