@@ -3,13 +3,14 @@
 In this project, I set up my portfolio repository. My goal here was to build a confrance page for mobile and desktop versions.
 
 
-## :red_circle: Live Demo
+## :red_circle: Live Demo Link
 
 [view website](https://bria222.github.io/)
 
 
 ## Watch video
-Website walk through [video](https://www.loom.com/share/e9ff72db88354533b951f202a1633d7c)
+
+ [video](https://www.loom.com/share/e9ff72db88354533b951f202a1633d7c)
 
 ## :hammer: Built With
 
@@ -18,12 +19,13 @@ Website walk through [video](https://www.loom.com/share/e9ff72db88354533b951f202
 - javascript
 - bootstrap
 - scss
+- linters
 
 To get a local copy up and running follow these simple steps:
 
-1. Go to the [repository page](https://github.com/Bria222/capstone_Conference_page).
+1. Go to the [repository page](https://github.com/Bria222/Bria222.github.io).
 2. Press the "Code" button and copy the link.
-3. Clone it using git command `git clone <https://github.com/Bria222/capstone_Conference_page/>`.
+3. Clone it using git command `git clone <https://github.com/Bria222/Bria222.github.io>`.
 
 ## :blue_book: Learning Objectives
 
