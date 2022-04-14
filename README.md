@@ -9,7 +9,8 @@ In this project, I set up my portfolio repository. My goal here was to build a c
 
 
 ## Watch video
-Website walk through [video](https://www.loom.com/share/e9ff72db88354533b951f202a1633d7c)
+Website walk through
+ [video](https://www.loom.com/share/e9ff72db88354533b951f202a1633d7c)
 
 ## :hammer: Built With
 
