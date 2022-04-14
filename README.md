@@ -5,7 +5,11 @@ In this project, I set up my portfolio repository. My goal here was to build a c
 
 ## :red_circle: Live Demo
 
-[Live Preview Link](https://vigilant-pare-10c09b.netlify.app/)
+[view website](https://bria222.github.io/)
+
+
+## Watch video
+Website walk through [video](https://www.loom.com/share/e9ff72db88354533b951f202a1633d7c)
 
 ## :hammer: Built With
 
@@ -13,6 +17,7 @@ In this project, I set up my portfolio repository. My goal here was to build a c
 - css
 - javascript
 - bootstrap
+- scss
 
 To get a local copy up and running follow these simple steps:
 
@@ -47,7 +52,7 @@ Feel free to check the [issues page](https://github.com/Bria222/capstone_Confere
 ## Acknowledgments
 
 - Thanks to Microverse
-- Cindy Shin in Behance.
+- Thanks to[Cindy Shin](https://www.behance.net/adagio07) for original design.
 
 ## 📝 License
 
