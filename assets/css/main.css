@@ -117,6 +117,14 @@ header .lg-navbar .namm-logoo {
   height: 3rem;
 }
 
+@media only screen and (max-width: 768px) {
+  .headline .headline-content {
+    padding: 2rem 1.5rem !important;
+    display: flex;
+    flex-direction: column;
+  }
+}
+
 /* hiding for mobile */
 @media screen and (max-width: 767px) {
   header .lg-navbar,
@@ -355,7 +363,7 @@ header .lg-navbar .my-logo {
 }
 
 .headline .headline-content {
-  padding: 3rem 1.5rem;
+  padding: 10rem 1.5rem;
   display: flex;
   flex-direction: column;
 }
@@ -632,7 +640,8 @@ header .lg-navbar .my-logo {
 }
 
 .featured-speakers .speaker-profile .speaker-image {
-  height: 6.25rem;
+  height: 130px;
+  width: 130px;
 }
 
 .featured-speakers .speaker-description {
