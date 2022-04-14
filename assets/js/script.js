@@ -18,15 +18,14 @@ $(document).ready(() => {
   //   $("div.choise").slideDown(1000);
 
   // });
-  $('button.proceed').attr('class','btn btn-success');
+  $('button.proceed').attr('class', 'btn btn-success');
   $('button.proceed').click((event) => {
-   const pT__size = $('#T__size option:selected').val();
+    const pT__size = $('#T__size option:selected').val();
     const psnacks = $('#snacks option:selected').val();
     const ptopping = [];
     $.each($("input[name='toppings']:checked"), function () {
       ptopping.push($(this).val());
     });
-    console.log(ptopping.join(', '));
 
     switch (pT__size) {
       case '0':
@@ -38,13 +37,12 @@ $(document).ready(() => {
         break;
       case 'VIP':
         price = 850;
-        console.log(`The price is ${price}`);
+
         break;
       case 'REGULAR':
         price = 600;
         break;
       default:
-        console.log('error');
     }
     switch (psnacks) {
       case '0':
@@ -60,13 +58,10 @@ $(document).ready(() => {
         snacks_price = 180;
         break;
       default:
-        console.log('No price');
     }
     const topping_value = ptopping.length * 50;
-    console.log(`toppins value${topping_value}`);
 
     if ((pT__size === '0') && (psnacks === '0')) {
-      console.log('nothing selected');
       $('button.proceed').show();
       $('#information').show();
       $('div.choise').hide();
@@ -78,7 +73,7 @@ $(document).ready(() => {
     }
 
     total = price + snacks_price + topping_value;
-    console.log(total);
+
     let checkoutTotal = 0;
     checkoutTotal += total;
 
@@ -97,7 +92,7 @@ $(document).ready(() => {
       $.each($("input[name='toppings']:checked"), function () {
         ptopping.push($(this).val());
       });
-      console.log(ptopping.join(', '));
+
       switch (pT__size) {
         case '0':
           price = 0;
@@ -108,13 +103,12 @@ $(document).ready(() => {
           break;
         case 'VIP':
           price = 850;
-          console.log(`The price is ${price}`);
+
           break;
         case 'REGULAR':
           price = 600;
           break;
         default:
-          console.log('error');
       }
       switch (psnacks) {
         case '0':
@@ -130,20 +124,17 @@ $(document).ready(() => {
           snacks_price = 180;
           break;
         default:
-          console.log('No price');
       }
       const topping_value = ptopping.length * 50;
-      console.log(`toppins value${topping_value}`);
+
       total = price + snacks_price + topping_value;
-      console.log(total);
 
       checkoutTotal += total;
-      console.log(checkoutTotal);
+
       // constractor function
       const newOrder = new GetTicket(pname, pT__size, psnacks, ptopping, total);
 
       $('#ordersmade').append(`<tr><td id="person">${newOrder.name}</td><td id="ticket-type">${newOrder.T__size}</td><td id="favourite-snack">${newOrder.snacks}</td><td ">${newOrder.topping}</td><td id="totals">${newOrder.total}</td></tr>`);
-      console.log(newOrder);
     });
     // Checkout button
     $('button#checkout').click(() => {
@@ -151,7 +142,7 @@ $(document).ready(() => {
       $('button.repeatTransaction').hide();
       $('button.deliver').slideDown(1000);
       $('#addedprice').slideDown(1000);
-      console.log(`Your total bills is sh. ${checkoutTotal}`);
+
       $('#pizzatotal').append(`Your bill is sh. ${checkoutTotal}`);
     });
 
@@ -164,7 +155,7 @@ $(document).ready(() => {
       $('button.deliver').hide();
       $('#pizzatotal').hide();
       const deliceryamount = checkoutTotal + 10;
-      console.log(`You will pay sh. ${deliceryamount} on delivery`);
+
       $('#totalbill').append(`Your bill plus delivery fee is: ${deliceryamount}`);
     });
 
@@ -176,7 +167,7 @@ $(document).ready(() => {
       $('.delivery').hide();
       $('button#final-order').hide();
       const deliceryamount = checkoutTotal + 150;
-      console.log(`Final Bill is: ${deliceryamount}`);
+
       const person = $('input#name').val();
 
       // eslint-disable-next-line eqeqeq
