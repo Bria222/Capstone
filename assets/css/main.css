@@ -549,7 +549,6 @@ header .lg-navbar .my-logo {
 .feature .pst-occurence .card-container {
   display: flex;
   flex-direction: column;
-  align-items: center;
   padding: 1.5rem;
   gap: 1.25rem;
 }
