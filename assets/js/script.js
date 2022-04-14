@@ -1,8 +1,6 @@
-/* eslint-disable no-undef */
-/* eslint-disable camelcase */
-let price; let snacks_price;
+let price , snacks_price, topping_price ;
 let total = 0;
-function GetTicket(name, T__size, snacks, topping, total) {
+function GetTicket( name,T__size,snacks,topping, total ){
   this.name = name;
   this.T__size = T__size;
   this.snacks = snacks;
@@ -10,177 +8,196 @@ function GetTicket(name, T__size, snacks, topping, total) {
   this.total = total;
 }
 
+
 // proceed button
-$(document).ready(() => {
+$(document).ready(function(){
   // $("button.proceed").click(function(){
   //   $("button.proceed").hide();
   //   $("#information").hide();
   //   $("div.choise").slideDown(1000);
-
   // });
-  $('button.proceed').attr('class', 'btn btn-success');
-  $('button.proceed').click((event) => {
-    const pT__size = $('#T__size option:selected').val();
-    const psnacks = $('#snacks option:selected').val();
-    const ptopping = [];
-    $.each($("input[name='toppings']:checked"), function () {
-      ptopping.push($(this).val());
-    });
 
-    switch (pT__size) {
-      case '0':
-        price = 0;
-        break;
-      case 'VVIP':
-        price = 1200;
+  $("button.proceed").addClass("btn btn-success");
+  $("button.proceed").click(function(event){
+   let pname = $(".name option:selected").val();
+   let pT__size = $("#T__size option:selected").val();
+   let psnacks = $("#snacks option:selected").val();
+   let ptopping = [];
+   $.each($("input[name='toppings']:checked"), function(){            
+       ptopping.push($(this).val());
+   });
+   console.log(ptopping.join(", "));
 
-        break;
-      case 'VIP':
-        price = 850;
-
-        break;
-      case 'REGULAR':
-        price = 600;
-        break;
-      default:
-    }
-    switch (psnacks) {
-      case '0':
+   switch(pT__size){
+    case "0":
+      price =0;
+    break;
+    case "VVIP":
+       price = 1200;
+       console.log(price);
+     break;
+     case "VIP":
+       price = 850;
+       console.log("The price is "+price);
+     break;
+     case "REGULAR":
+       price = 600;
+       console.log(price);
+     default:
+       console.log("error"); 
+   }
+   switch(psnacks){
+      case "0":
         snacks_price = 0;
-        break;
-      case 'soda':
+      break;
+      case "soda":
         snacks_price = 200;
-        break;
-      case 'biscuits':
+      break;
+      case "biscuits":
         snacks_price = 250;
-        break;
-      case 'crips-free':
+      break;
+      case "crips-free":
         snacks_price = 180;
-        break;
+      break;
       default:
+        console.log("No price"); 
     }
-    const topping_value = ptopping.length * 50;
+    let topping_value = ptopping.length*50;
+    console.log("toppins value" + topping_value);
 
-    if ((pT__size === '0') && (psnacks === '0')) {
-      $('button.proceed').show();
-      $('#information').show();
-      $('div.choise').hide();
-      alert('Please select your ticket type');
-    } else {
-      $('button.proceed').hide();
-      $('#information').hide();
-      $('div.choise').slideDown(1000);
+    if((pT__size == "0") && (psnacks == "0")){
+      console.log("nothing selected");
+      $("button.proceed").show();
+      $("#information").show();
+      $("div.choise").hide();
+      alert("Please select your ticket type"); 
+    }
+    else{
+      $("button.proceed").hide();
+      $("#information").hide();
+      $("div.choise").slideDown(1000);
     }
 
     total = price + snacks_price + topping_value;
+    console.log(total);
+    let checkoutTotal =0;
+    checkoutTotal = checkoutTotal + total;
 
-    let checkoutTotal = 0;
-    checkoutTotal += total;
-
-    $('#person').html($('.name option:selected').val());
-    $('#ticket-type').html($('#T__size option:selected').val());
-    $('#favourite-snack').html($('#snacks option:selected').val());
-    $('#topping').html(ptopping.join(', '));
-    $('#totals').html(total);
-
-    // Add ticket button
-    $('button.repeatTransaction').click(() => {
-      const pname = $('.name option:selected').val();
-      const pT__size = $('#T__size option:selected').val();
-      const psnacks = $('#snacks option:selected').val();
-      const ptopping = [];
-      $.each($("input[name='toppings']:checked"), function () {
-        ptopping.push($(this).val());
+    $("#person").html($(".name option:selected").val());
+    $("#ticket-type").html( $("#T__size option:selected").val());
+    $("#favourite-snack").html($("#snacks option:selected").val());
+    $("#topping").html(ptopping.join(", "));
+    $("#totals").html(total);
+    
+// Add ticket button
+    $("button.repeatTransaction").click(function(){
+      let pname = $(".name option:selected").val();
+      let pT__size = $("#T__size option:selected").val();
+      let psnacks = $("#snacks option:selected").val();
+      let ptopping = [];
+      $.each($("input[name='toppings']:checked"), function(){            
+          ptopping.push($(this).val());
       });
+      console.log(ptopping.join(", "));
+      switch(pT__size){
+        case "0":
+          price =0;
+        break;
+        case "VVIP":
+           price = 1200;
+           console.log(price);
+         break;
+         case "VIP":
+           price = 850;
+           console.log("The price is "+price);
+         break;
+         case "REGULAR":
+           price = 600;
+           console.log(price);
+         default:
+           console.log("error"); 
+       }
+       switch(psnacks){
+          case "0":
+            snacks_price = 0;
+          break;
+          case "soda":
+            snacks_price = 200;
+          break;
+          case "biscuits":
+            snacks_price = 150;
+          break;
+          case "crips-free":
+            snacks_price = 180;
+          break;
+          default:
+            console.log("No price"); 
+        }
+        let topping_value = ptopping.length*50;
+        console.log("toppins value" + topping_value);
+        total = price + snacks_price + topping_value;
+        console.log(total);
 
-      switch (pT__size) {
-        case '0':
-          price = 0;
-          break;
-        case 'VVIP':
-          price = 1200;
-
-          break;
-        case 'VIP':
-          price = 850;
-
-          break;
-        case 'REGULAR':
-          price = 600;
-          break;
-        default:
-      }
-      switch (psnacks) {
-        case '0':
-          snacks_price = 0;
-          break;
-        case 'soda':
-          snacks_price = 200;
-          break;
-        case 'biscuits':
-          snacks_price = 150;
-          break;
-        case 'crips-free':
-          snacks_price = 180;
-          break;
-        default:
-      }
-      const topping_value = ptopping.length * 50;
-
-      total = price + snacks_price + topping_value;
-
-      checkoutTotal += total;
-
+        checkoutTotal = checkoutTotal + total;
+        console.log(checkoutTotal);
       // constractor function
-      const newOrder = new GetTicket(pname, pT__size, psnacks, ptopping, total);
+      let newOrder = new GetTicket(pname, pT__size, psnacks,ptopping,total);
 
-      $('#ordersmade').append(`<tr><td id="person">${newOrder.name}</td><td id="ticket-type">${newOrder.T__size}</td><td id="favourite-snack">${newOrder.snacks}</td><td ">${newOrder.topping}</td><td id="totals">${newOrder.total}</td></tr>`);
+      $("#ordersmade").append('<tr><td id="person">'+newOrder.name +'</td><td id="ticket-type">' + newOrder.T__size + '</td><td id="favourite-snack">'+newOrder.snacks + '</td><td ">'+newOrder.topping+'</td><td id="totals">'+newOrder.total+'</td></tr>');
+      console.log(newOrder);
+      
+      
+
     });
     // Checkout button
-    $('button#checkout').click(() => {
-      $('button#checkout').hide();
-      $('button.repeatTransaction').hide();
-      $('button.deliver').slideDown(1000);
-      $('#addedprice').slideDown(1000);
-
-      $('#pizzatotal').append(`Your bill is sh. ${checkoutTotal}`);
+    $("button#checkout").click(function(){ 
+      $("button#checkout").hide();
+      $("button.repeatTransaction").hide();
+      $("button.deliver").slideDown(1000);
+      $("#addedprice").slideDown(1000);
+      console.log("Your total bills is sh. "+checkoutTotal);
+      $("#pizzatotal").append("Your bill is sh. "+checkoutTotal);
     });
 
     // home delivery button
-    $('button.deliver').click(() => {
-      $('.ticket-details').hide();
-      $('.choise h2').hide();
-      $('.delivery').slideDown(1000);
-      $('#addedprice').hide();
-      $('button.deliver').hide();
-      $('#pizzatotal').hide();
-      const deliceryamount = checkoutTotal + 10;
-
-      $('#totalbill').append(`Your bill plus delivery fee is: ${deliceryamount}`);
+    $("button.deliver").click(function(){
+      $(".ticket-details").hide();
+      $(".choise h2").hide();
+      $(".delivery").slideDown(1000);
+      $("#addedprice").hide();
+      $("button.deliver").hide();
+      $("#pizzatotal").hide();
+      let deliceryamount= checkoutTotal+10;
+      console.log("You will pay sh. "+deliceryamount+" on delivery");
+      $("#totalbill").append("Your bill plus delivery fee is: "+deliceryamount);
     });
 
     // when one clicks place order button
-    $('button#final-order').click((event) => {
+    $("button#final-order").click(function(event){
       event.preventDefault();
 
-      $('#pizzatotal').hide();
-      $('.delivery').hide();
-      $('button#final-order').hide();
-      const deliceryamount = checkoutTotal + 150;
+      $("#pizzatotal").hide();
+      $(".delivery").hide();
+      $("button#final-order").hide();
+      let deliceryamount= checkoutTotal+150;
+      console.log("Final Bill is: "+deliceryamount);
+      let person = $("input#name").val();
+      let phone = $("input#phone").val();
+      let ticket = $("input#ticket").val();
 
-      const person = $('input#name').val();
-
-      // eslint-disable-next-line eqeqeq
-      if ($('input#name').val() && $('input#phone').val() && $('input#ticket').val() != '') {
-        $('#finallmessage').append(`${person}, We have recieved your  application please pay due  amount of   ${deliceryamount}`);
-        $('#totalbill').hide();
-        $('#finallmessage').slideDown(1200);
-      } else {
-        alert('Please fill ticket delivery details!');
-        $('.delivery').show();
-        $('button#final-order').show();
+      if ($("input#name").val() && $("input#phone").val() && $("input#ticket").val()!=""){
+  
+        $("#finallmessage").append(person+", We have recieved your  application please pay due  amount of   "+deliceryamount );
+        $("#totalbill").hide();
+        $("#finallmessage").slideDown(1200);
+        
+      }
+      else { 
+        alert("Please fill ticket delivery details!");
+        $(".delivery").show();
+        $("button#final-order").show();
       }
     });
-    event.preventDefault();
+   event.preventDefault();
   });
 });
