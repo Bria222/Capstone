@@ -108,6 +108,7 @@ const featuredSpeakers = [
     description:
       'Daniel Ndambuki famously known as Churchill is a Kenyan comedian who hosts the comedy television show Churchill Show on TV47 Kenya Kenya on Sundays. ',
   },
+
 ];
 
 const speakerProfile = document.querySelector('.fs-container-grid');
