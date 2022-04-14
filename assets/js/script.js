@@ -16,9 +16,11 @@ $(document).ready(() => {
   //   $("button.proceed").hide();
   //   $("#information").hide();
   //   $("div.choise").slideDown(1000);
+
   // });
+  $('button.proceed').attr('class','btn btn-success');
   $('button.proceed').click((event) => {
-    const pT__size = $('#T__size option:selected').val();
+   const pT__size = $('#T__size option:selected').val();
     const psnacks = $('#snacks option:selected').val();
     const ptopping = [];
     $.each($("input[name='toppings']:checked"), function () {
