@@ -5,7 +5,7 @@ In this project, I set up my portfolio repository. My goal here was to build a c
 
 ## :red_circle: Live Demo Link
 
-[view website](https://bria222.github.io/)
+[view website](https:///)
 
 
 ## Watch video
@@ -23,7 +23,7 @@ In this project, I set up my portfolio repository. My goal here was to build a c
 
 To get a local copy up and running follow these simple steps:
 
-1. Go to the [repository page](https://github.com/Bria222/Bria222.github.io).
+1. Go to the [repository page](https://github.com/Bria222/Capstone).
 2. Press the "Code" button and copy the link.
 3. Clone it using git command `git clone <https://github.com/Bria222/Bria222.github.io>`.
 
