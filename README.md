@@ -5,7 +5,7 @@ In this project, I set up my portfolio repository. My goal here was to build a c
 
 ## :red_circle: Live Demo Link
 
-[view website](https:///)
+[view website](https://bria222.github.io/Capstone/)
 
 
 ## Watch video
